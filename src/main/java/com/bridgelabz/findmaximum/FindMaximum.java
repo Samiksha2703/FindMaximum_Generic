@@ -1,10 +1,5 @@
 package com.bridgelabz.findmaximum;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-
 public class FindMaximum<T extends Comparable<T>> {
 
     private final T p;
@@ -22,7 +17,9 @@ public class FindMaximum<T extends Comparable<T>> {
     }
 
     public T findMaximum() {
-        return FindMaximum.findMaximum(p, q, r, s, t);
+        T findMax = FindMaximum.findMaximum(p, q, r, s, t);
+            printMax(findMax);
+            return findMax;
     }
 
     //Single generic method to compare different types of data
@@ -41,5 +38,9 @@ public class FindMaximum<T extends Comparable<T>> {
             max = t;
         }
         return max;
+    }
+
+    public void printMax(T maximum) {
+        System.out.println("Maximum : " + maximum);
     }
 }
